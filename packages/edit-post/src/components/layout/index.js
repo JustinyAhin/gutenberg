@@ -262,20 +262,15 @@ function Layout( { styles } ) {
 							<MetaBoxes location="normal" />
 							<MetaBoxes location="advanced" />
 						</div>
+						{ ( ! hasReducedUI && ! isMobileViewport && isRichEditingEnabled && mode === 'visual') && (
+							<div className="edit-post-layout__footer">
+								<BlockBreadcrumb />
+							</div>
+						) }
 						{ isMobileViewport && sidebarIsOpened && (
 							<ScrollLock />
 						) }
 					</>
-				}
-				footer={
-					! hasReducedUI &&
-					! isMobileViewport &&
-					isRichEditingEnabled &&
-					mode === 'visual' && (
-						<div className="edit-post-layout__footer">
-							<BlockBreadcrumb />
-						</div>
-					)
 				}
 				actions={
 					<ActionsPanel

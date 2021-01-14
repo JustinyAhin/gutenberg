@@ -113,6 +113,17 @@ function InterfaceSkeleton(
 						tabIndex="-1"
 					>
 						{ content }
+
+						{ !! footer && (
+							<div
+								className="interface-interface-skeleton__footer"
+								role="region"
+								aria-label={ mergedLabels.footer }
+								tabIndex="-1"
+							>
+								{ footer }
+							</div>
+						) }
 					</div>
 					{ !! sidebar && (
 						<div
@@ -136,16 +147,6 @@ function InterfaceSkeleton(
 					) }
 				</div>
 			</div>
-			{ !! footer && (
-				<div
-					className="interface-interface-skeleton__footer"
-					role="region"
-					aria-label={ mergedLabels.footer }
-					tabIndex="-1"
-				>
-					{ footer }
-				</div>
-			) }
 		</div>
 	);
 }
