@@ -133,7 +133,7 @@
 				border-left: $border-width solid $gray-300;
 			}
 
-			.block-editor-block-toolbar .components-toolbar-group,
+			.block-editor-block-toolbar .components-toolbar-group:not(.media-replace-flow),
 			.block-editor-block-toolbar .components-toolbar {
 				$top-toolbar-padding: ($header-height - $grid-unit-60) / 2;
 				height: $header-height;
